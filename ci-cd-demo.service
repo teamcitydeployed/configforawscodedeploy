@@ -1,15 +1,16 @@
 [Unit]
-Description=CI/CD Demo Service File
+Description=CI/CD Demo Service for Go Application
 After=network.target
 
-[service]
-ExecStart=sudo dotnet ci-cd-demo.d;; --urls "http://*:80"
-WorkingDirecotry=/var/www
-User:ubuntu
+[Service]
+ExecStart=/var/www/build/myapp
+WorkingDirectory=/var/www/build
+User=ubuntu
 Restart=on-failure
 RestartSec=5
 StartLimitInterval=0
-Environment=DOLANG_ENV=Production
+Environment=GO_ENV=production
 
 [Install]
-WantedBy=multi.user.target
+WantedBy=multi-user.target
+
