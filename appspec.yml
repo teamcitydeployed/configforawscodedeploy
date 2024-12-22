@@ -15,3 +15,6 @@ hooks:
     - location: set-permissions.sh  # New script to change permissions
       timeout: 300
       runas: ubuntu # run as root
+    - location: move-html-files.sh
+      timeout: 300
+      runas: ubuntu # Add this step to move HTML files to the static folder
