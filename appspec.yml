@@ -12,3 +12,6 @@ hooks:
     - location: install-service.sh
       timeout: 300
       runas: ubuntu #run as root
+    - location: set-permissions.sh  # New script to change permissions
+      timeout: 300
+      runas: ubuntu # run as root
