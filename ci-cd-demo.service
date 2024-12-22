@@ -3,8 +3,8 @@ Description=CI/CD Demo Service for Go Application
 After=network.target
 
 [Service]
-ExecStart=/var/www/build/myapp
-WorkingDirectory=/var/www/build
+ExecStart=/var/www/myapp
+WorkingDirectory=/var/www/
 User=ubuntu
 Restart=on-failure
 RestartSec=5
