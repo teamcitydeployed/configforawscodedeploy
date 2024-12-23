@@ -9,12 +9,12 @@ hooks:
       timeout: 300
       runas: ubuntu #run as root
   AfterInstall:
-    - location: install-service.sh
+    - location: set-permissions.sh
       timeout: 300
       runas: ubuntu #run as root
-    - location: set-permissions.sh  # New script to change permissions
+    - location: move-html-files.sh  # New script to change permissions
       timeout: 300
       runas: ubuntu # run as root
-    - location: move-html-files.sh
+    - location: install-service.sh
       timeout: 300
       runas: ubuntu # Add this step to move HTML files to the static folder
